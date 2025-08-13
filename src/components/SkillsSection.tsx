@@ -71,7 +71,8 @@ export default function SkillsSection() {
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Here are the technologies and tools I work with to bring ideas to life
+            Here are the technologies and tools I work with to bring ideas to
+            life
           </p>
         </div>
 
@@ -98,10 +99,13 @@ export default function SkillsSection() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)} Skills
+              {activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}{' '}
+              Skills
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {renderSkills(skillCategories[activeCategory as keyof typeof skillCategories])}
+              {renderSkills(
+                skillCategories[activeCategory as keyof typeof skillCategories]
+              )}
             </div>
           </div>
         </div>
@@ -112,13 +116,22 @@ export default function SkillsSection() {
             Always Learning
           </h3>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-            Technology evolves rapidly, and I'm committed to continuous learning. 
-            I regularly explore new frameworks, attend workshops, and contribute to 
-            open source projects to stay at the forefront of web development.
+            Technology evolves rapidly, and I'm committed to continuous
+            learning. I regularly explore new frameworks, attend workshops, and
+            contribute to open source projects to stay at the forefront of web
+            development.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
-            {['AI/ML', 'Three.js', 'GraphQL', 'Rust', 'Go', 'AWS', 'Kubernetes'].map((tech) => (
+            {[
+              'AI/ML',
+              'Three.js',
+              'GraphQL',
+              'Rust',
+              'Go',
+              'AWS',
+              'Kubernetes',
+            ].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"

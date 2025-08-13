@@ -15,7 +15,9 @@ export default function AboutSection() {
             <div className="relative z-10">
               <div className="w-80 h-80 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 p-2">
                 <div className="w-full h-full rounded-xl bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <span className="text-6xl text-gray-600 dark:text-gray-400">👨‍💻</span>
+                  <span className="text-6xl text-gray-600 dark:text-gray-400">
+                    👨‍💻
+                  </span>
                 </div>
               </div>
             </div>
@@ -26,38 +28,27 @@ export default function AboutSection() {
           {/* Right Column - Content */}
           <div className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-              I'm a passionate developer who loves creating amazing web experiences
+              Saya adalah seorang Data Analyst yang berfokus pada mengubah data
+              kompleks menjadi insight yang dapat ditindaklanjuti
             </h3>
-            
+
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              With a strong foundation in modern web technologies, I specialize in building 
-              responsive, user-friendly applications that solve real-world problems. I'm 
-              constantly learning and adapting to new technologies to stay current with 
-              industry trends.
-            </p>
-            
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing 
-              to open source projects, or sharing knowledge with the developer community. 
-              I believe in writing clean, maintainable code and creating intuitive user experiences.
+              Dengan latar belakang pendidikan di bidang teknologi informasi,
+              saya memiliki keahlian analisis data dan manajemen proyek, saya
+              terbiasa mengambil keputusan berbasis data dan menghadirkan solusi
+              yang efektif untuk kebutuhan bisnis.
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-6 pt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
-                <div className="text-gray-600 dark:text-gray-400">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">3+</div>
-                <div className="text-gray-600 dark:text-gray-400">Years Experience</div>
-              </div>
-            </div>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Saya memiliki passion untuk memanfaatkan teknologi dan analitik
+              dalam memecahkan masalah nyata serta mendorong pertumbuhan
+              perusahaan.
+            </p>
 
             {/* CTA Button */}
             <div className="pt-6">
               <a
-                href="/resume.pdf"
+                href="/Cv Muhamad Irfan.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200"
@@ -73,7 +64,7 @@ export default function AboutSection() {
                 >
                   <path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
                 </svg>
-                Download Resume
+                Download CV
               </a>
             </div>
           </div>
