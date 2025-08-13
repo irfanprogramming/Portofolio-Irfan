@@ -116,7 +116,7 @@ export default function SkillsSection() {
             Always Learning
           </h3>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-            Technology evolves rapidly, and I'm committed to continuous
+            Technology evolves rapidly, and I&apos;m committed to continuous
             learning. I regularly explore new frameworks, attend workshops, and
             contribute to open source projects to stay at the forefront of web
             development.
