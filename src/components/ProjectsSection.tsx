@@ -57,13 +57,20 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Customer Satisfaction Analysis',
+    title: 'Analyst Penjualan Supermarket With Mysql',
     description:
       'Advanced sentiment analysis tool for customer feedback using machine learning algorithms. Processes customer reviews, surveys, and social media mentions to provide actionable insights for business improvement.',
     screenshots: [
-      '/projects/sentiment-analysis-1.jpg',
-      '/projects/sentiment-analysis-2.jpg',
-      '/projects/sentiment-analysis-3.jpg',
+      '/Penjualan Supermarket 1.JPG',
+      '/Penjualan Supermarket 2.JPG',
+      '/Penjualan Supermarket 3.JPG',
+      '/Penjualan Supermarket 4.JPG',
+      '/Penjualan Supermarket 5.JPG',
+      '/Penjualan Supermarket 6.JPG',
+      '/Penjualan Supermarket 7.JPG',
+      '/Penjualan Supermarket 8.JPG',
+      '/Penjualan Supermarket 9.JPG',
+      '/Penjualan Supermarket 10.JPG',
     ],
     technologies: ['Python', 'TensorFlow', 'NLP', 'Scikit-learn', 'Flask'],
     features: [
