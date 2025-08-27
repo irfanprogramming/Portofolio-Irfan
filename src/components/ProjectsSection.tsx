@@ -115,11 +115,7 @@ const projects = [
     title: 'Power Bi Analyst Spotify',
     description:
       'Personal finance management application with investment tracking, budget planning, and financial goal setting. Includes real-time market data integration and comprehensive financial reporting.',
-    screenshots: [
-      'Spotify 1.JPG',
-      'Spotify 2.JPG',
-      'Spotify 3.JPG',
-    ],
+    screenshots: ['Spotify 1.JPG', 'Spotify 2.JPG', 'Spotify 3.JPG'],
     technologies: [
       'React',
       'Chart.js',
@@ -145,7 +141,8 @@ const projects = [
     screenshots: [
       'Supermarket Power Bi 1.JPG',
       'Supermarket Power Bi 2.JPG',
-      'Supermarket Power Bi 3.JPG',,
+      'Supermarket Power Bi 3.JPG',
+      ,
     ],
     technologies: ['Vue.js', 'D3.js', 'MongoDB', 'Express', 'Chart.js'],
     features: [
