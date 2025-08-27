@@ -339,7 +339,7 @@ export default function ProjectsSection() {
                   {!imageError &&
                     selectedProject.screenshots[currentScreenshot] && (
                       <Image
-                        src={selectedProject.screenshots[currentScreenshot]}
+                        src={selectedProject.screenshots[currentScreenshot]!}
                         alt={`${selectedProject.title} screenshot ${
                           currentScreenshot + 1
                         }`}
@@ -609,7 +609,7 @@ export default function ProjectsSection() {
                 className="w-full h-full"
               >
                 <Image
-                  src={selectedProject.screenshots[modalIndex]}
+                  src={selectedProject.screenshots[modalIndex]!}
                   alt={`${selectedProject.title} full screenshot ${
                     modalIndex + 1
                   }`}
