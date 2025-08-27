@@ -142,7 +142,6 @@ const projects = [
       'Supermarket Power Bi 1.JPG',
       'Supermarket Power Bi 2.JPG',
       'Supermarket Power Bi 3.JPG',
-      ,
     ],
     technologies: ['Vue.js', 'D3.js', 'MongoDB', 'Express', 'Chart.js'],
     features: [
@@ -154,33 +153,6 @@ const projects = [
     githubUrl: 'https://github.com/yourusername/team-dashboard',
     liveUrl: 'https://team-dashboard-demo.vercel.app',
     category: 'Data Analyst',
-  },
-  {
-    id: 6,
-    title: 'Supply Chain Analytics',
-    description:
-      'Enterprise-level supply chain optimization platform with predictive analytics, inventory management, and logistics tracking. Helps businesses optimize their supply chain operations and reduce costs.',
-    screenshots: [
-      '/projects/supply-chain-1.jpg',
-      '/projects/supply-chain-2.jpg',
-      '/projects/supply-chain-3.jpg',
-    ],
-    technologies: [
-      'Python',
-      'Apache Spark',
-      'Kafka',
-      'Elasticsearch',
-      'Kibana',
-    ],
-    features: [
-      'Predictive inventory management',
-      'Logistics optimization',
-      'Supply chain visualization',
-      'Cost analysis reporting',
-    ],
-    githubUrl: 'https://github.com/yourusername/supply-chain',
-    liveUrl: 'https://supply-chain-demo.vercel.app',
-    category: 'Data Analytics',
   },
 ];
 
