@@ -2,11 +2,11 @@
 
 Website portfolio modern dan responsif yang dibangun dengan Next.js 15, TypeScript, dan Tailwind CSS. Menampilkan proyek, keahlian, dan pengalaman profesional dengan desain yang bersih dan kontemporer.
 
-## 🚀 Fitur
+## 🚀 Fitur Utama
 
 - **Desain Modern**: UI yang bersih dan kontemporer dengan animasi yang halus
-- **Layout Responsif**: Dioptimalkan penuh untuk semua ukuran perangkat
-- **Mode Gelap**: Dukungan mode gelap bawaan
+- **Layout Responsif**: Dioptimalkan penuh untuk semua ukuran perangkat  
+- **Gallery Screenshot**: Project showcase dengan zoom dan lightbox functionality
 - **Optimasi Performa**: Waktu loading cepat dengan optimasi Next.js
 - **SEO Friendly**: Meta tag yang tepat dan HTML semantik
 - **Smooth Scrolling**: Navigasi interaktif dengan scroll yang halus
