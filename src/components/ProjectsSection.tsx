@@ -28,7 +28,32 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Analyst Spotify With Mysql',
+    title: 'Analyst Perfomance Cv.Bona Mandiri',
+    description:
+      'Comprehensive team management platform for tracking performance metrics, goal achievement, and resource optimization. Features advanced analytics and reporting capabilities for management insights.',
+    screenshots: [
+      '/Bona-1.png',
+      '/Bona-2.png',
+      '/Bona-3.png',
+      '/Bona-4.png',
+      '/Bona-5.png',
+      '/Bona-6.png',
+    ],
+    technologies: ['Vue.js', 'D3.js', 'MongoDB', 'Express', 'Chart.js'],
+    features: [
+      'Performance metrics tracking',
+      'Goal setting and monitoring',
+      'Team productivity analysis',
+      'Automated reporting',
+    ],
+    githubUrl: 'https://github.com/yourusername/team-dashboard',
+    liveUrl: 'https://team-dashboard-demo.vercel.app',
+    category: 'Data Analyst',
+  },
+
+  {
+    id: 3,
+    title: 'Mysql Analyst Spotify',
     description:
       'Comprehensive project management solution with task tracking, team collaboration, and progress monitoring. Features include Gantt charts, resource allocation, and automated reporting for enhanced productivity.',
     screenshots: [
@@ -55,9 +80,10 @@ const projects = [
     liveUrl: 'https://pm-system-demo.vercel.app',
     category: 'Project Management',
   },
+
   {
-    id: 3,
-    title: 'Analyst Penjualan Supermarket With Mysql',
+    id: 4,
+    title: 'Mysql Analyst Penjualan Supermarket',
     description:
       'Advanced sentiment analysis tool for customer feedback using machine learning algorithms. Processes customer reviews, surveys, and social media mentions to provide actionable insights for business improvement.',
     screenshots: [
@@ -83,15 +109,16 @@ const projects = [
     liveUrl: 'https://sentiment-analysis-demo.vercel.app',
     category: 'Data Analytics',
   },
+
   {
-    id: 4,
-    title: 'Financial Portfolio Tracker',
+    id: 5,
+    title: 'Power Bi Analyst Spotify',
     description:
       'Personal finance management application with investment tracking, budget planning, and financial goal setting. Includes real-time market data integration and comprehensive financial reporting.',
     screenshots: [
-      '/projects/finance-tracker-1.jpg',
-      '/projects/finance-tracker-2.jpg',
-      '/projects/finance-tracker-3.jpg',
+      'Spotify 1.JPG',
+      'Spotify 2.JPG',
+      'Spotify 3.JPG',
     ],
     technologies: [
       'React',
@@ -111,17 +138,14 @@ const projects = [
     category: 'Data Analytics',
   },
   {
-    id: 5,
-    title: 'Analyst Perfomance Cv.Bona Mandiri',
+    id: 6,
+    title: 'Power Bi Analyst Supermarket Sales',
     description:
       'Comprehensive team management platform for tracking performance metrics, goal achievement, and resource optimization. Features advanced analytics and reporting capabilities for management insights.',
     screenshots: [
-      '/Bona-1.png',
-      '/Bona-2.png',
-      '/Bona-3.png',
-      '/Bona-4.png',
-      '/Bona-5.png',
-      '/Bona-6.png',
+      'Supermarket Power Bi 1.JPG',
+      'Supermarket Power Bi 2.JPG',
+      'Supermarket Power Bi 3.JPG',,
     ],
     technologies: ['Vue.js', 'D3.js', 'MongoDB', 'Express', 'Chart.js'],
     features: [
