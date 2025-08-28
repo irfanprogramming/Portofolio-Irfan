@@ -8,29 +8,23 @@ const projects = [
     id: 1,
     title: 'Supermarket Sales Performance',
     description:
-      'Comprehensive data analytics platform for e-commerce businesses featuring real-time sales tracking, customer behavior analysis, and predictive insights. Built with modern data visualization tools and interactive charts.',
+      'Project ini saya buat untuk menganalisis data penjualan supermarket secara lebih mudah dan interaktif, dengan visualisasi data yang menarik seperti : penjualan & profit, tren penjualan per bulan, segmentasi pelanggan, dan metode pembayaran favorit. jadi insight yang dihasilkan membantu memahami perilaku pelanggan dan memperkirakan pendapatan untuk strategi penjualan yang lebih tepat ',
     screenshots: [
       '/Supermarket 1.JPG',
       '/Supermarket 2.JPG',
       '/Supermarket 3.JPG',
       '/Supermarket 4.JPG',
     ],
-    technologies: ['Python', 'Tableau', 'SQL', 'Power BI', 'Pandas'],
-    features: [
-      'Real-time sales monitoring',
-      'Customer segmentation analysis',
-      'Revenue forecasting',
-      'Interactive data visualization',
-    ],
+    Tools: ['Excel'],
     githubUrl: 'https://github.com/yourusername/ecommerce-analytics',
     liveUrl: 'https://ecommerce-analytics.vercel.app',
-    category: 'Data Analytics',
+    category: 'Data Analyst',
   },
   {
     id: 2,
     title: 'Analyst Perfomance Cv.Bona Mandiri',
     description:
-      'Comprehensive team management platform for tracking performance metrics, goal achievement, and resource optimization. Features advanced analytics and reporting capabilities for management insights.',
+      'Analyst penjualan dan pembelian pada Cv.Bona Mandiri, seperti : memantau tren, omset, pembelian, laba, dan margin, serta menganalisis peringkat hotel/restoran, vendor, dan produk berdasarkan transaksi, kuantitas, dan nilai  ',
     screenshots: [
       '/Bona-1.png',
       '/Bona-2.png',
@@ -39,13 +33,7 @@ const projects = [
       '/Bona-5.png',
       '/Bona-6.png',
     ],
-    technologies: ['Vue.js', 'D3.js', 'MongoDB', 'Express', 'Chart.js'],
-    features: [
-      'Performance metrics tracking',
-      'Goal setting and monitoring',
-      'Team productivity analysis',
-      'Automated reporting',
-    ],
+    Tools: ['Excel'],
     githubUrl: 'https://github.com/yourusername/team-dashboard',
     liveUrl: 'https://team-dashboard-demo.vercel.app',
     category: 'Data Analyst',
@@ -69,13 +57,7 @@ const projects = [
       '/mysql 9.JPG',
       '/mysql 10.JPG',
     ],
-    technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'TypeScript', 'Prisma'],
-    features: [
-      'Task assignment and tracking',
-      'Team collaboration tools',
-      'Gantt chart visualization',
-      'Resource management',
-    ],
+    Tools: ['Next.js', 'Node.js', 'PostgreSQL', 'TypeScript', 'Prisma'],
     githubUrl: 'https://github.com/yourusername/project-management',
     liveUrl: 'https://pm-system-demo.vercel.app',
     category: 'Project Management',
@@ -98,13 +80,7 @@ const projects = [
       '/Penjualan Supermarket 9.JPG',
       '/Penjualan Supermarket 10.JPG',
     ],
-    technologies: ['Python', 'TensorFlow', 'NLP', 'Scikit-learn', 'Flask'],
-    features: [
-      'Sentiment classification',
-      'Automated report generation',
-      'Trend analysis dashboard',
-      'Real-time feedback processing',
-    ],
+    Tools: ['Python', 'TensorFlow', 'NLP', 'Scikit-learn', 'Flask'],
     githubUrl: 'https://github.com/yourusername/sentiment-analysis',
     liveUrl: 'https://sentiment-analysis-demo.vercel.app',
     category: 'Data Analytics',
@@ -116,18 +92,12 @@ const projects = [
     description:
       'Personal finance management application with investment tracking, budget planning, and financial goal setting. Includes real-time market data integration and comprehensive financial reporting.',
     screenshots: ['Spotify 1.JPG', 'Spotify 2.JPG', 'Spotify 3.JPG'],
-    technologies: [
+    Tools: [
       'React',
       'Chart.js',
       'Firebase',
       'Financial APIs',
       'Material-UI',
-    ],
-    features: [
-      'Investment portfolio tracking',
-      'Budget management',
-      'Financial goal planning',
-      'Market data integration',
     ],
     githubUrl: 'https://github.com/yourusername/finance-tracker',
     liveUrl: 'https://finance-tracker-demo.vercel.app',
@@ -143,13 +113,7 @@ const projects = [
       'Supermarket Power Bi 2.JPG',
       'Supermarket Power Bi 3.JPG',
     ],
-    technologies: ['Vue.js', 'D3.js', 'MongoDB', 'Express', 'Chart.js'],
-    features: [
-      'Performance metrics tracking',
-      'Goal setting and monitoring',
-      'Team productivity analysis',
-      'Automated reporting',
-    ],
+    Tools: ['Vue.js', 'D3.js', 'MongoDB', 'Express', 'Chart.js'],
     githubUrl: 'https://github.com/yourusername/team-dashboard',
     liveUrl: 'https://team-dashboard-demo.vercel.app',
     category: 'Data Analyst',
@@ -419,40 +383,13 @@ export default function ProjectsSection() {
                 </p>
               </div>
 
-              {/* Key Features */}
-              <div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  Key Features
-                </h4>
-                <ul className="space-y-2">
-                  {selectedProject.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-700">
-                      <svg
-                        className="w-5 h-5 text-green-500 mr-3"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               {/* Technologies */}
               <div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  Technologies Used
+                  Tools
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {selectedProject.technologies.map((tech, index) => (
+                  {selectedProject.Tools.map((tech, index) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium"
@@ -518,7 +455,7 @@ export default function ProjectsSection() {
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-1">
-                    {project.technologies.slice(0, 3).map((tech, index) => (
+                    {project.Tools.slice(0, 3).map((tech, index) => (
                       <span
                         key={index}
                         className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
@@ -526,9 +463,9 @@ export default function ProjectsSection() {
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 3 && (
+                    {project.Tools.length > 3 && (
                       <span className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">
-                        +{project.technologies.length - 3} more
+                        +{project.Tools.length - 3} more
                       </span>
                     )}
                   </div>
