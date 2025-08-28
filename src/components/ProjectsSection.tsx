@@ -239,7 +239,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Project Navigation Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12" suppressHydrationWarning>
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           {projects.map((project) => (
             <button
               key={project.id}
@@ -256,7 +256,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Main Project Display */}
-        <div className="bg-gray-50 rounded-2xl p-8 shadow-lg" suppressHydrationWarning>
+        <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Screenshot Slider */}
             <div className="relative group">
@@ -476,7 +476,6 @@ export default function ProjectsSection() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
           aria-modal="true"
           role="dialog"
-          suppressHydrationWarning
         >
           <button
             onClick={closeModal}
