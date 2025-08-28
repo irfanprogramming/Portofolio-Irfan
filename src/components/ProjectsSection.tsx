@@ -43,7 +43,7 @@ const projects = [
     id: 3,
     title: 'Mysql Analyst Spotify',
     description:
-      'Comprehensive project management solution with task tracking, team collaboration, and progress monitoring. Features include Gantt charts, resource allocation, and automated reporting for enhanced productivity.',
+      'Project ini berfokus untuk menganalisa database spotify menggunakan MySql untuk mengeksplorasi informasi seputar musik, artis, genre, query sql yang saya buat dapat menganalisa seperti : total musik, musik dengan popularitas tertinggi, menampilkan musik dari artis yang memiliki lebih dari 3 musik, dll. menghasilkan insight yang dapat dimanfaatkan untuk memahami tren musik secara lebih mendalam .',
     screenshots: [
       '/mysql 0.JPG',
       '/mysql 1.JPG',
@@ -92,13 +92,7 @@ const projects = [
     description:
       'Personal finance management application with investment tracking, budget planning, and financial goal setting. Includes real-time market data integration and comprehensive financial reporting.',
     screenshots: ['Spotify 1.JPG', 'Spotify 2.JPG', 'Spotify 3.JPG'],
-    Tools: [
-      'React',
-      'Chart.js',
-      'Firebase',
-      'Financial APIs',
-      'Material-UI',
-    ],
+    Tools: ['React', 'Chart.js', 'Firebase', 'Financial APIs', 'Material-UI'],
     githubUrl: 'https://github.com/yourusername/finance-tracker',
     liveUrl: 'https://finance-tracker-demo.vercel.app',
     category: 'Data Analytics',
@@ -245,7 +239,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Project Navigation Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12" suppressHydrationWarning>
           {projects.map((project) => (
             <button
               key={project.id}
@@ -262,7 +256,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Main Project Display */}
-        <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
+        <div className="bg-gray-50 rounded-2xl p-8 shadow-lg" suppressHydrationWarning>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Screenshot Slider */}
             <div className="relative group">
@@ -482,6 +476,7 @@ export default function ProjectsSection() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
           aria-modal="true"
           role="dialog"
+          suppressHydrationWarning
         >
           <button
             onClick={closeModal}
@@ -617,6 +612,7 @@ export default function ProjectsSection() {
           </div>
         </div>
       )}
+      </div>
     </section>
   );
 }
