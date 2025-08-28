@@ -588,8 +588,7 @@ export default function ProjectsSection() {
                   {selectedProject.screenshots.length}
                 </div>
                 <div className="text-xs text-white/70 mt-1">
-                  Scroll untuk zoom • Drag untuk geser • ESC untuk tutup • +/-
-                  untuk zoom • 0 untuk reset
+                  Scroll untuk zoom • Drag untuk geser • ESC untuk tutup • +/- untuk zoom • 0 untuk reset
                 </div>
               </div>
               <div className="space-x-2">
@@ -612,7 +611,6 @@ export default function ProjectsSection() {
           </div>
         </div>
       )}
-      </div>
     </section>
   );
 }
