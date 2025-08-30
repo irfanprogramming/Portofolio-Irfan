@@ -32,10 +32,10 @@ export default function ContactSection() {
                 Email
               </h4>
               <a
-                href="Email: ipanmuhamad91@gmail.com"
+                href="gmail:ipanmuhamad91@gmail.com"
                 className="text-blue-600 hover:underline"
               >
-                your.email@example.com
+                ipanmuhamad91@gmail.com
               </a>
             </div>
 
@@ -54,13 +54,13 @@ export default function ContactSection() {
                 </svg>
               </div>
               <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                Phone
+                WhatsApp
               </h4>
               <a
-                href="WhatsApp: 0895366531652"
+                href="https://wa.me/0895366531652"
                 className="text-blue-600 hover:underline"
               >
-                +1 (234) 567-890
+                0895366531652
               </a>
             </div>
 
@@ -91,7 +91,7 @@ export default function ContactSection() {
             <h4 className="text-2xl font-bold text-gray-900 mb-8">Follow Me</h4>
             <div className="flex justify-center space-x-6">
               <a
-                href="www.linkedin.com/in/muhamad-irfan-081760288"
+                href="https://www.linkedin.com/in/muhamad-irfan-081760288"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center justify-center transition-colors duration-200"
