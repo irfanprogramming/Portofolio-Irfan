@@ -16,8 +16,6 @@ const projects = [
       '/Supermarket 4.JPG',
     ],
     Tools: ['Excel'],
-    githubUrl: 'https://github.com/yourusername/ecommerce-analytics',
-    liveUrl: 'https://ecommerce-analytics.vercel.app',
     category: 'Data Analyst',
   },
   {
@@ -34,8 +32,6 @@ const projects = [
       '/Bona-6.png',
     ],
     Tools: ['Excel'],
-    githubUrl: 'https://github.com/yourusername/team-dashboard',
-    liveUrl: 'https://team-dashboard-demo.vercel.app',
     category: 'Data Analyst',
   },
 
@@ -57,17 +53,15 @@ const projects = [
       '/mysql 9.JPG',
       '/mysql 10.JPG',
     ],
-    Tools: ['Next.js', 'Node.js', 'PostgreSQL', 'TypeScript', 'Prisma'],
-    githubUrl: 'https://github.com/yourusername/project-management',
-    liveUrl: 'https://pm-system-demo.vercel.app',
-    category: 'Project Management',
+    Tools: ['Mysql'],
+    category: 'Data Analyst',
   },
 
   {
     id: 4,
     title: 'Mysql Analyst Penjualan Supermarket',
     description:
-      'Advanced sentiment analysis tool for customer feedback using machine learning algorithms. Processes customer reviews, surveys, and social media mentions to provide actionable insights for business improvement.',
+      'Project ini saya buat bertujuan untuk menganalisis database penjualan supermarket menggunakan MySql, Untuk melihat total penjualan, produk terlaris setiap cabang, tren penjualan bulanan tertinggi di seluruh cabang, Hasil analisis ini memberikan insight yang berguna dalam mendukung keputusan bisnis ',
     screenshots: [
       '/Penjualan Supermarket 1.JPG',
       '/Penjualan Supermarket 2.JPG',
@@ -80,36 +74,30 @@ const projects = [
       '/Penjualan Supermarket 9.JPG',
       '/Penjualan Supermarket 10.JPG',
     ],
-    Tools: ['Python', 'TensorFlow', 'NLP', 'Scikit-learn', 'Flask'],
-    githubUrl: 'https://github.com/yourusername/sentiment-analysis',
-    liveUrl: 'https://sentiment-analysis-demo.vercel.app',
-    category: 'Data Analytics',
+    Tools: ['Mysql'],
+    category: 'Data Analyst',
   },
 
   {
     id: 5,
     title: 'Power Bi Analyst Spotify',
     description:
-      'Personal finance management application with investment tracking, budget planning, and financial goal setting. Includes real-time market data integration and comprehensive financial reporting.',
-    screenshots: ['Spotify 1.JPG', 'Spotify 2.JPG', 'Spotify 3.JPG'],
-    Tools: ['React', 'Chart.js', 'Firebase', 'Financial APIs', 'Material-UI'],
-    githubUrl: 'https://github.com/yourusername/finance-tracker',
-    liveUrl: 'https://finance-tracker-demo.vercel.app',
-    category: 'Data Analytics',
+      'Project ini membuat dashboard dan menganalisis database spotify yang saya koneksikan dari Mysql menggunakan Power Bi, Untuk memberikan insight terkait musik, artis, dan genre, Dashboard interaktif ini menampilkan seperti average popularity, explicit content, total musik, top artis & lagu populer, kategori & genre insight, hingga duplicate musik, Project ini membantu memahami tren musik secara lebih mudah dan cepat',
+    screenshots: ['/Spotify 1.JPG', '/Spotify 2.JPG', '/Spotify 3.JPG'],
+    Tools: ['Power Bi'],
+    category: 'Data Analyst',
   },
   {
     id: 6,
     title: 'Power Bi Analyst Supermarket Sales',
     description:
-      'Comprehensive team management platform for tracking performance metrics, goal achievement, and resource optimization. Features advanced analytics and reporting capabilities for management insights.',
+      'Project ini saya buat bertujuan untuk menganalisis database penjualan supermarket yang saya koneksikan dari Mysql menggunakan Power Bi, Untuk memberikan insight terkait penjualan, produk, dan kategori, Dashboard interaktif ini menampilkan seperti total penjualan, produk terlaris, tren penjualan bulanan, dan analisis perbandingan antar cabang, Project ini membantu memahami kinerja penjualan supermarket secara lebih mudah dan cepat.',
     screenshots: [
-      'Supermarket Power Bi 1.JPG',
-      'Supermarket Power Bi 2.JPG',
-      'Supermarket Power Bi 3.JPG',
+      '/Supermarket Power Bi 1.JPG',
+      '/Supermarket Power Bi 2.JPG',
+      '/Supermarket Power Bi 3.JPG',
     ],
-    Tools: ['Vue.js', 'D3.js', 'MongoDB', 'Express', 'Chart.js'],
-    githubUrl: 'https://github.com/yourusername/team-dashboard',
-    liveUrl: 'https://team-dashboard-demo.vercel.app',
+    Tools: ['Power Bi'],
     category: 'Data Analyst',
   },
 ];
@@ -393,26 +381,6 @@ export default function ProjectsSection() {
                   ))}
                 </div>
               </div>
-
-              {/* Action Buttons */}
-              <div className="flex gap-4 pt-4">
-                <a
-                  href={selectedProject.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors duration-200"
-                >
-                  View Live Demo
-                </a>
-                <a
-                  href={selectedProject.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-6 py-3 rounded-lg font-medium text-center transition-colors duration-200"
-                >
-                  View Code
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -587,7 +555,8 @@ export default function ProjectsSection() {
                   {selectedProject.screenshots.length}
                 </div>
                 <div className="text-xs text-white/70 mt-1">
-                  Scroll untuk zoom • Drag untuk geser • ESC untuk tutup • +/- untuk zoom • 0 untuk reset
+                  Scroll untuk zoom • Drag untuk geser • ESC untuk tutup • +/-
+                  untuk zoom • 0 untuk reset
                 </div>
               </div>
               <div className="space-x-2">
