@@ -66,9 +66,9 @@ export default function HeroSection() {
           </div>
 
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-            Saya percaya bahwa data berkualitas + struktur eksekusi =
-            keberlanjutan perbaikan bisnis. Mengubah data menjadi insight
-            strategis dan mengelola proyek end-to-end
+            Mengubah data menjadi insight strategis yang mendorong keputusan
+            bisnis lebih cerdas, berkelanjutan, dan mengelola proyek
+            end-to-end
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function HeroSection() {
             onClick={() => scrollToSection('contact')}
             className="px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white font-semibold rounded-lg transition-all duration-200"
           >
-            Get In Touch
+            Contact
           </button>
         </div>
 

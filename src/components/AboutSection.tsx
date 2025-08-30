@@ -28,7 +28,7 @@ export default function AboutSection() {
           {/* Right Column - Content */}
           <div className="space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-              Saya adalah seorang Data Analyst yang berfokus pada mengubah data
+              Saya adalah seorang data analyst yang berfokus mengubah data
               kompleks menjadi insight yang dapat ditindaklanjuti
             </h3>
 
