@@ -82,7 +82,7 @@ const projects = [
     id: 5,
     title: 'Power Bi Analyst Spotify',
     description:
-      'Project ini membuat dashboard dan menganalisis database spotify yang saya koneksikan dari Mysql menggunakan Power Bi, Untuk memberikan insight terkait musik, artis, dan genre, Dashboard interaktif ini menampilkan seperti average popularity, explicit content, total musik, top artis & lagu populer, kategori & genre insight, hingga duplicate musik, Project ini membantu memahami tren musik secara lebih mudah dan cepat',
+      'Project ini membuat dashboard dan menganalisis database spotify yang saya koneksikan dari Mysql menggunakan Power Bi, Untuk memberikan insight terkait musik, artis, dan genre, Dashboard interaktif ini menampilkan seperti average popularity, explicit content, total musik, top artis & lagu populer, kategori & genre insight, dan duplicate musik, Project ini membantu memahami tren musik secara lebih mudah dan cepat',
     screenshots: ['/Spotify 1.JPG', '/Spotify 2.JPG', '/Spotify 3.JPG'],
     Tools: ['Power Bi'],
     category: 'Data Analyst',
@@ -401,8 +401,27 @@ export default function ProjectsSection() {
                     : ''
                 }`}
               >
-                <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden">
+                  {project.screenshots[0] ? (
+                    <Image
+                      src={project.screenshots[0]}
+                      alt={`${project.title} preview`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-300 hover:scale-110"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const fallback = target.parentElement?.querySelector('.fallback-content') as HTMLElement;
+                        if (fallback) fallback.style.display = 'flex';
+                      }}
+                    />
+                  ) : null}
+                  {/* Fallback jika gambar tidak ada atau error */}
+                  <div 
+                    className="fallback-content absolute inset-0 flex items-center justify-center"
+                    style={{ display: project.screenshots[0] ? 'none' : 'flex' }}
+                  >
                     <div className="text-center text-gray-600">
                       <div className="text-4xl mb-2">📊</div>
                       <p className="text-sm font-medium">{project.category}</p>
