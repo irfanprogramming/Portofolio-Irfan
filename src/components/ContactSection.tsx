@@ -57,10 +57,10 @@ export default function ContactSection() {
                 WhatsApp
               </h4>
               <a
-                href="https://wa.me/0895366531652"
+                href="https://wa.me/62895366531652"
                 className="text-blue-600 hover:underline"
               >
-                0895366531652
+                +62 895-3665-31652
               </a>
             </div>
 
@@ -119,7 +119,7 @@ export default function ContactSection() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/0895366531652"
+                href="https://wa.me/62895366531652"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-lg flex items-center justify-center transition-colors duration-200"

@@ -49,7 +49,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/0895366531652"
+                href="https://wa.me/62895366531652"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-green-500 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-200"
@@ -146,10 +146,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/0895366531652"
+                  href="https://wa.me/62895366531652"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  0895366531652
+                  +62 895-3665-31652
                 </a>
               </li>
               <li>Depok, Jawa Barat, Indonesia</li>
@@ -160,9 +160,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 mb-4 md:mb-0">
-              © {currentYear} Irfan. All rights reserved.
-            </p>
+            <p className="text-gray-400 mb-4 md:mb-0">© {currentYear} Irfan</p>
 
             <div className="flex items-center space-x-6">
               <p className="text-gray-400 text-sm">
