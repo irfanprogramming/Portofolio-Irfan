@@ -8,7 +8,7 @@ export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const texts = ['Data Analyst', 'Project Management'];
+    const texts = ['Data Analyst', 'Business Analyst', 'Project Management'];
 
     const typeEffect = () => {
       const currentFullText = texts[currentIndex];

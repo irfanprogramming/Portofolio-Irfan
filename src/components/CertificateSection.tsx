@@ -142,13 +142,9 @@ export default function CertificateSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Sertifikat & Penghargaan
+            Sertifikat
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Kumpulan sertifikat dan penghargaan yang telah saya raih dalam
-            perjalanan belajar dan karir
-          </p>
         </div>
 
         {/* Certificates Grid */}

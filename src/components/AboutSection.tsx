@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
@@ -14,10 +16,15 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative z-10">
               <div className="w-80 h-80 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 p-2">
-                <div className="w-full h-full rounded-xl bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <span className="text-6xl text-gray-600 dark:text-gray-400">
-                    👨‍💻
-                  </span>
+                <div className="w-full h-full rounded-xl overflow-hidden">
+                  <Image
+                    src="/Foto chimory irfan.jpg"
+                    alt="Muhamad Irfan"
+                    width={320}
+                    height={320}
+                    className="w-full h-full rounded-xl object-cover"
+                    priority
+                  />
                 </div>
               </div>
             </div>

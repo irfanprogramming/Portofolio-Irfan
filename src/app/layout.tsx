@@ -14,23 +14,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Irfan - Portfolio Website',
-  description:
-    'Portfolio website showcasing my work and skills in web development',
+  description: 'Portfolio website data analyst',
   keywords: [
     'portfolio',
-    'web developer',
-    'react',
-    'next.js',
-    'javascript',
-    'typescript',
+    'data analyst',
+    'excel',
+    'mysql',
+    'power bi',
+    'python',
   ],
   authors: [{ name: 'Irfan' }],
   creator: 'Irfan',
   openGraph: {
     title: 'Irfan - Portfolio Website',
-    description:
-      'Portfolio website showcasing my work and skills in web development',
+    description: 'Portfolio website data analyst',
     type: 'website',
+    url: 'https://irfan91.vercel.app',
+    siteName: 'Irfan Portfolio',
   },
 };
 
