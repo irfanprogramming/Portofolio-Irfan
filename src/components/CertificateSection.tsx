@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const certificates = [
@@ -8,43 +8,37 @@ const certificates = [
     id: 1,
     title: 'Dicoding Certification',
     issuer: 'Dicoding',
-    date: '2025',
     image: '/Sertifikat Dicoding.jpg',
   },
   {
     id: 2,
     title: 'Myskill Certification',
     issuer: 'Myskill',
-    date: '2025',
     image: '/Sertif power pivot 3_page-0001.jpg',
   },
   {
     id: 3,
-    title: 'Next.js Developer Certification',
-    issuer: 'Vercel',
-    date: '2023',
-    image: '/certificates/nextjs-cert.jpg',
+    title: 'Myskill Certification',
+    issuer: 'Myskill',
+    image: '/Sertif sql irfan_page-0001.jpg',
   },
   {
     id: 4,
-    title: 'TypeScript Fundamentals',
-    issuer: 'Microsoft',
-    date: '2023',
-    image: '/certificates/typescript-cert.jpg',
+    title: 'Program Analyst',
+    issuer: 'BNSP',
+    image: '/Sertifikat BNSP.jpg',
   },
   {
     id: 5,
-    title: 'AWS Cloud Practitioner',
-    issuer: 'Amazon Web Services',
-    date: '2023',
-    image: '/certificates/aws-cert.jpg',
+    title: 'MTCNA',
+    issuer: 'Mikrotik',
+    image: '/Sertif Mikrotik.jpg',
   },
   {
     id: 6,
-    title: 'Web Design Certification',
-    issuer: 'Google',
-    date: '2022',
-    image: '/certificates/webdesign-cert.jpg',
+    title: 'Bootcamp Digital Bisnis',
+    issuer: 'Universitas Nusa Mandiri',
+    image: '/Sertif bootcamp digital bisnis.jpg',
   },
 ];
 
@@ -52,14 +46,96 @@ export default function CertificateSection() {
   const [selectedCertificate, setSelectedCertificate] = useState<
     (typeof certificates)[0] | null
   >(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [isDragging, setIsDragging] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
 
   const openModal = (certificate: (typeof certificates)[0]) => {
     setSelectedCertificate(certificate);
+    setZoomLevel(1);
+    setPosition({ x: 0, y: 0 });
   };
 
   const closeModal = () => {
     setSelectedCertificate(null);
+    setZoomLevel(1);
+    setPosition({ x: 0, y: 0 });
   };
+
+  const zoomIn = () => {
+    setZoomLevel(prev => Math.min(prev + 0.25, 3));
+  };
+
+  const zoomOut = () => {
+    setZoomLevel(prev => Math.max(prev - 0.25, 0.5));
+  };
+
+  const resetZoom = () => {
+    setZoomLevel(1);
+    setPosition({ x: 0, y: 0 });
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (zoomLevel > 1) {
+      setIsDragging(true);
+      setDragStart({
+        x: e.clientX - position.x,
+        y: e.clientY - position.y
+      });
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging && zoomLevel > 1) {
+      setPosition({
+        x: e.clientX - dragStart.x,
+        y: e.clientY - dragStart.y
+      });
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      zoomIn();
+    } else {
+      zoomOut();
+    }
+  };
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!selectedCertificate) return;
+
+      switch (e.key) {
+        case 'Escape':
+          closeModal();
+          break;
+        case '+':
+        case '=':
+          e.preventDefault();
+          zoomIn();
+          break;
+        case '-':
+          e.preventDefault();
+          zoomOut();
+          break;
+        case '0':
+          e.preventDefault();
+          resetZoom();
+          break;
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [selectedCertificate]);
 
   return (
     <section id="certificates" className="py-20 bg-gray-50">
@@ -103,9 +179,6 @@ export default function CertificateSection() {
                   <span className="text-blue-600 font-medium">
                     {certificate.issuer}
                   </span>
-                  <span className="text-gray-500 text-sm">
-                    {certificate.date}
-                  </span>
                 </div>
                 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200">
                   Lihat Sertifikat
@@ -124,37 +197,94 @@ export default function CertificateSection() {
                 <h3 className="text-2xl font-bold text-gray-900">
                   {selectedCertificate.title}
                 </h3>
-                <button
-                  onClick={closeModal}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+
+                {/* Zoom Controls */}
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={zoomOut}
+                    className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+                    title="Zoom Out"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H4" />
+                    </svg>
+                  </button>
+
+                  <span className="text-sm font-medium min-w-[60px] text-center">
+                    {Math.round(zoomLevel * 100)}%
+                  </span>
+
+                  <button
+                    onClick={zoomIn}
+                    className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+                    title="Zoom In"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                  </button>
+
+                  <button
+                    onClick={resetZoom}
+                    className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors duration-200"
+                    title="Reset Zoom"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                  </button>
+
+                  <button
+                    onClick={closeModal}
+                    className="p-2 text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                    title="Close"
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
 
               {/* Modal Content */}
               <div className="p-6">
-                {/* Certificate Image */}
-                <div className="w-full h-96 relative rounded-lg overflow-hidden">
-                  <Image
-                    src={selectedCertificate.image}
-                    alt={selectedCertificate.title}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 100vw, 1000px"
-                  />
+                {/* Certificate Image Container */}
+                <div
+                  className="w-full h-96 relative rounded-lg overflow-hidden bg-gray-100 cursor-move"
+                  onMouseDown={handleMouseDown}
+                  onMouseMove={handleMouseMove}
+                  onMouseUp={handleMouseUp}
+                  onMouseLeave={handleMouseUp}
+                  onWheel={handleWheel}
+                  style={{ userSelect: 'none' }}
+                >
+                  <div
+                    style={{
+                      transform: `scale(${zoomLevel}) translate(${position.x / zoomLevel}px, ${position.y / zoomLevel}px)`,
+                      transformOrigin: 'center center',
+                      transition: isDragging ? 'none' : 'transform 0.2s ease-in-out',
+                    }}
+                    className="w-full h-full relative"
+                  >
+                    <Image
+                      src={selectedCertificate.image}
+                      alt={selectedCertificate.title}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 1000px"
+                      priority
+                    />
+                  </div>
                 </div>
               </div>
             </div>
