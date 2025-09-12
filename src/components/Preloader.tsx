@@ -9,7 +9,7 @@ interface PreloaderProps {
 }
 
 // 3 kalimat yang akan ditampilkan
-const sentences: string[] = ['Produktif', 'Konsisten', 'Semangat teruss'];
+const sentences: string[] = ['Fokus', 'Produktif', 'Berkualitas'];
 
 export default function Preloader({
   onComplete,
