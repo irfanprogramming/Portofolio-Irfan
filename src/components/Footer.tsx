@@ -3,10 +3,6 @@
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6">
@@ -166,23 +162,6 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">
                 Built with Next.js & Tailwind CSS
               </p>
-              <button
-                onClick={scrollToTop}
-                className="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors duration-200"
-                aria-label="Scroll to top"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                </svg>
-              </button>
             </div>
           </div>
         </div>

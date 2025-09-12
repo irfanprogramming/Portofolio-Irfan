@@ -72,7 +72,7 @@ export default function HeroSection() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <button
             onClick={() => scrollToSection('projects')}
             className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200"
@@ -88,11 +88,12 @@ export default function HeroSection() {
           </button>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        {/* Tanda Panah ke Bawah */}
+        <div className="flex justify-center">
           <button
             onClick={() => scrollToSection('about')}
-            className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="p-3 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 bg-gray dark:bg-black-800 rounded-full shadow-lg animate-bounce"
+            aria-label="Scroll to about section"
           >
             <svg
               className="w-6 h-6"
